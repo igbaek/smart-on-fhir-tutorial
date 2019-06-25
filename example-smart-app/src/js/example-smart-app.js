@@ -24,10 +24,12 @@
 
         $.when(pt, obv).fail(onError);
 
-        console.log(patient.id, pt);
+        console.log("pt: ", patient, pt);
 
         $.when(pt, obv).done(function(patient, obv) {
           
+          console.log("patient: ", patient);
+
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
